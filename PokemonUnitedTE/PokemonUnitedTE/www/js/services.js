@@ -20,13 +20,13 @@ myApp.services = {
       var equipeItem = ons.createElement(
         '<ons-list-item tappable category="' + myApp.services.categories.parseId(data.categorie)+ '">' +
           '<label class="left">' +
-          '<img class="pokemon-icon" src="/img/fa-poke.png">' +
+          '<img class="pokemon-icon" src="/android_asset/www/img/fa-poke.png">' +
           '</label>' +
           '<div class="center">' +
           '<label id="nomEquipe">' + data.nom + '</label>' +
-          '<img id="imgPokemon1" class="pokemon-icon-menu" src="/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon1).imgName + '">' +
-          '<img id="imgPokemon2" class="pokemon-icon-menu" src="/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon2).imgName + '">' +
-          '<img id="imgPokemon3" class="pokemon-icon-menu" src="/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon3).imgName + '">' +
+          '<img id="imgPokemon1" class="pokemon-icon-menu" src="/android_asset/www/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon1).imgName + '">' +
+          '<img id="imgPokemon2" class="pokemon-icon-menu" src="/android_asset/www/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon2).imgName + '">' +
+          '<img id="imgPokemon3" class="pokemon-icon-menu" src="/android_asset/www/pokemon-db/thm/' + pokemonDAO.getPokemonParNom(data.pokemon3).imgName + '">' +
           '</div>' +
           '<div class="right">' +
             '<ons-icon style="color: grey; padding-left: 4px" icon="ion-ios-trash-outline, material:md-delete"></ons-icon>' +
@@ -72,17 +72,17 @@ myApp.services = {
       if (data.pokemon1 !== equipeItem.data.pokemon1) {
           var currentPokemon = pokemonDAO.getPokemonParNom(data.pokemon1);
           console.log(currentPokemon);
-          equipeItem.querySelector("#imgPokemon1").src = "/pokemon-db/thm/" + currentPokemon.imgName;
+          equipeItem.querySelector("#imgPokemon1").src = "/android_asset/www/pokemon-db/thm/" + currentPokemon.imgName;
       }
       if (data.pokemon2 !== equipeItem.data.pokemon2) {
           var currentPokemon = pokemonDAO.getPokemonParNom(data.pokemon2);
           console.log(currentPokemon);
-          equipeItem.querySelector("#imgPokemon2").src = "/pokemon-db/thm/" + currentPokemon.imgName;
+          equipeItem.querySelector("#imgPokemon2").src = "/android_asset/www/pokemon-db/thm/" + currentPokemon.imgName;
       }
       if (data.pokemon3 !== equipeItem.data.pokemon3) {
           var currentPokemon = pokemonDAO.getPokemonParNom(data.pokemon3);
           console.log(currentPokemon);
-          equipeItem.querySelector("#imgPokemon3").src = "/pokemon-db/thm/" + currentPokemon.imgName;
+          equipeItem.querySelector("#imgPokemon3").src = "/android_asset/www/pokemon-db/thm/" + currentPokemon.imgName;
       }
 
       if (data.categorie !== equipeItem.data.categorie) {
@@ -126,7 +126,7 @@ myApp.services = {
           var pokemonItem = ons.createElement(
               '<ons-list-item tappable>' +
               '<label class="left">' +
-              '<img class="pokemon-icon" src="/pokemon-db/thm/' + data.imgName + '">' +
+              '<img class="pokemon-icon" src="/android_asset/www/pokemon-db/thm/' + data.imgName + '">' +
               '</label>' +
               '<div class="center">' +
               data.nom +
@@ -168,7 +168,7 @@ myApp.services = {
               '<ons-list-item>' +
               '<div class="center">' +
               '<h1 class="animated slideInRight">' + data.nom + '</h1>' +
-              '<img class="animated slideInUp pokemon-img-pokedex"src="/pokemon-db/img/' + currentPokemon.imgName + '">' +
+              '<img class="animated slideInUp pokemon-img-pokedex"src="/android_asset/www/pokemon-db/img/' + currentPokemon.imgName + '">' +
               '</div>' +
               '</ons-list-item>'
           );

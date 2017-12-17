@@ -33,7 +33,7 @@
 
             $.ajax({
                 async: false,
-                url: "/pokemon-db/pokedex.json",
+                url: "/android_asset/www/pokemon-db/pokedex.json",
                 dataType: 'json',
                 success: function (pokemon) {
                     console.log(pokemon.length);

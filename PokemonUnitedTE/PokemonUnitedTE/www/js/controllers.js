@@ -53,7 +53,7 @@ myApp.controllers = {
   nouvelleEquipePage: function (page) {
       var options = {
 
-          url: "/pokemon-db/pokedex.json",
+          url: "/android_asset/www/pokemon-db/pokedex.json",
 
           getValue: "ename",
 
@@ -120,66 +120,7 @@ myApp.controllers = {
   // Contact Page Controller //
   ////////////////////////////
   contactPage: function (page) {
-      var basicTimeline = anime.timeline({
-          autoplay: false
-      });
 
-      var pathEls = $(".check1");
-      for (var i = 0; i < pathEls.length; i++) {
-          var pathEl = pathEls[i];
-          var offset = anime.setDashoffset(pathEl);
-          pathEl.setAttribute("stroke-dashoffset", offset);
-      }
-
-      basicTimeline
-          .add({
-              targets: ".text1",
-              duration: 1,
-              opacity: "0"
-          })
-          .add({
-              targets: ".button1",
-              duration: 1300,
-              height: 20,
-              width: 300,
-              backgroundColor: "#2B2D2F",
-              border: "0",
-              borderRadius: 100
-          })
-          .add({
-              targets: ".progress-bar1",
-              duration: 2000,
-              width: 300,
-              easing: "linear"
-          })
-          .add({
-              targets: ".button1",
-              width: 0,
-              duration: 1
-          })
-          .add({
-              targets: ".progress-bar1",
-              width: 80,
-              height: 80,
-              delay: 500,
-              duration: 750,
-              borderRadius: 80,
-              backgroundColor: "#71DFBE"
-          })
-          .add({
-              targets: pathEl,
-              strokeDashoffset: [offset, 0],
-              duration: 200,
-              easing: "easeInOutSine"
-          });
-
-      $(".button1").click(function () {
-          basicTimeline.play();
-      });
-
-      $(".text1").click(function () {
-          basicTimeline.play();
-      });
   },
 
 
@@ -204,7 +145,7 @@ myApp.controllers = {
   modifierEquipePage: function (page) {
       var options = {
 
-          url: "/pokemon-db/pokedex.json",
+          url: "/android_asset/www/pokemon-db/pokedex.json",
           placeholder: "Pokemon",
 
           getValue: "ename",
@@ -232,9 +173,9 @@ myApp.controllers = {
     page.querySelector('#pokemon3-input').value = element.data.pokemon3;
     page.querySelector('#category-input').value = element.data.categorie;
     page.querySelector('#description-input').value = element.data.description;
-    page.querySelector("#imgPokemon1").src = "/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon1).imgName;
-    page.querySelector("#imgPokemon2").src = "/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon2).imgName;
-    page.querySelector("#imgPokemon3").src = "/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon3).imgName;
+    page.querySelector("#imgPokemon1").src = "/android_asset/www/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon1).imgName;
+    page.querySelector("#imgPokemon2").src = "/android_asset/www/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon2).imgName;
+    page.querySelector("#imgPokemon3").src = "/android_asset/www/pokemon-db/thm/" + pokemonDAO.getPokemonParNom(element.data.pokemon3).imgName;
 
     // Set button functionality to push 'battle.html' page.
     Array.prototype.forEach.call(page.querySelectorAll('[component="button/battle"]'), function (element) {

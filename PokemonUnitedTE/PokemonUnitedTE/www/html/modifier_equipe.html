@@ -1,0 +1,97 @@
+<ons-page id="modifierEquipePage">
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Retour</ons-back-button></div>
+    <div class="center">Description de l'equipe</div>
+    <div class="right">
+      <ons-toolbar-button component="button/sauvegarder-equipe">
+        <ons-if platform="android">
+          <ons-icon icon="md-save"></ons-icon>
+        </ons-if>
+        <ons-if platform="ios other">
+          Sauvegarder
+        </ons-if>
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <ons-list-title>Modifier son equipe</ons-list-title>
+  <ons-list>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Nom de l'equipe
+      </ons-if>
+      <div class="center">
+        <ons-input id="title-input" type="text" placeholder="Nom de l'equipe" float></ons-input>
+      </div>
+    </ons-list-item>
+      <ons-list-item modifier="nodivider">
+          <ons-if platform="ios other" class="left left-label">
+              Pokemon 1
+          </ons-if>
+          <div class="left">
+              <img id="imgPokemon1" class="pokemon-icon">
+          </div>
+          <div class="center">
+              <ons-input id="pokemon1-input" type="text" placeholder="Pokemon 1" float></ons-input>
+          </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+          <ons-if platform="ios other" class="left left-label">
+              Pokemon 2
+          </ons-if>
+          <div class="left">
+              <img id="imgPokemon2" class="pokemon-icon">
+          </div>
+          <div class="center">
+              <ons-input id="pokemon2-input" type="text" placeholder="Pokemon 2" float></ons-input>
+          </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+          <ons-if platform="ios other" class="left left-label">
+              Pokemon 3
+          </ons-if>
+          <div class="left">
+              <img id="imgPokemon3" class="pokemon-icon">
+          </div>
+          <div class="center">
+              <ons-input id="pokemon3-input" type="text" placeholder="Pokemon 3" float></ons-input>
+          </div>
+      </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Categorie
+      </ons-if>
+      <div class="center">
+        <ons-input id="category-input" type="text" placeholder="Categorie" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Description
+      </ons-if>
+      <div class="center">
+        <ons-input id="description-input" type="text" placeholder="Description" float></ons-input>
+      </div>
+    </ons-list-item>
+  </ons-list>
+
+  <ons-list-title>Battle</ons-list-title>
+  <ons-list>
+    <ons-list-item modifier="nodivider">
+      <label class="center" for="inner-highlight-input">
+        Lancer combat
+      </label>
+      <div class="right">
+          <ons-button component="button/battle" modifier="large" class="button button--large">GO!</ons-button>
+      </div>
+    </ons-list-item>
+    <!--<ons-list-item modifier="nodivider">
+      <label class="center" for="inner-urgent-input">
+        Is it urgent?
+      </label>
+      <div class="right">
+        <ons-switch id="urgent-input" input-id="inner-urgent-input" disabled></ons-switch>
+      </div>
+    </ons-list-item>-->
+  </ons-list>
+</ons-page>

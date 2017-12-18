@@ -1,0 +1,35 @@
+<ons-page id="menuPage">
+  <ons-list-title>Liens</ons-list-title>
+  <ons-list id="links">
+    <ons-list-item tappable style="cursor: pointer" modifier="longdivider chevron"
+      onclick="window.open('https://pokeapi.co/')"
+    >
+      <div class="left">
+        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
+      </div>
+      <div class="center">
+        PokeAPI
+      </div>
+    </ons-list-item>
+  </ons-list>
+
+  <ons-list-title>Equipes</ons-list-title>
+  <ons-list id="default-category-list">
+    <ons-list-item tappable>
+      <div class="left">
+        <ons-radio name="categoryGroup" input-id="r-fav" checked></ons-radio>
+      </div>
+      <label class="center" for="r-fav">Favorite</label>
+    </ons-list-item>
+    <ons-list-item tappable category-id="">
+      <div class="left">
+        <ons-radio name="categoryGroup" input-id="r-no"></ons-radio>
+      </div>
+      <label class="center" for="r-no">Aucune</label>
+    </ons-list-item>
+  </ons-list>
+
+  <ons-list-title>Categories personnalisees</ons-list-title>
+  <ons-list id="custom-category-list">
+
+</ons-page>

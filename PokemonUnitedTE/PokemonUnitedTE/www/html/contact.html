@@ -1,0 +1,52 @@
+﻿<ons-page id="contactPage">
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Retour</ons-back-button></div>
+        <div class="center">Contact Developer</div>
+        <div class="right">
+            <ons-toolbar-button component="button/send">
+                <ons-if platform="android">
+                    <ons-icon icon="md-send"></ons-icon>
+                </ons-if>
+                <ons-if platform="ios other">
+                    Send
+                </ons-if>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <form id="frm-contact" class="frm-contact" method="post">
+        <div>
+            <label for='name'>Name<span class='required'>(required)</span></label>
+            <input type='text' name='name' placeholder='your name here' required />
+        </div>
+
+        <div>
+            <label for='tel'>Tel</label>
+            <input type='tel' name='tel' placeholder='your telephone here' />
+        </div>
+
+        <div>
+            <label for='email'>Email <span class='required'>(required)</span></label>
+            <input type='email' name='email' placeholder='you@yourdomain.com' required />
+        </div>
+
+        <div>
+            <label for='url'>Website</label>
+            <input type='url' name='website' placeholder='http://' />
+        </div>
+
+        <div>
+            <label for='url'>Date</label>
+            <input type='date' name='date' placeholder='date' />
+        </div>
+
+        <div>
+            <label for='message'>Message <span class='required'>(required)</span></label>
+            <textarea name='message' required></textarea>
+        </div>
+
+        <div>
+            <button type='submit'>Send Message</button>
+        </div>
+    </form>
+</ons-page>

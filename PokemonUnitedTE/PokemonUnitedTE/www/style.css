@@ -1,0 +1,272 @@
+/*****************
+ *** Custom CSS ***
+ *****************/
+
+ons-input[type=text] {
+  width: 90%;
+}
+
+ons-button[modifier=large] {
+  width: initial;
+  margin: 10px;
+}
+
+ons-splitter-side[side="left"][animation="overlay"] {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  background-color: lightyellow;
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.left-label {
+  width: 30%;
+  font-size: 16px;
+  color: #666
+}
+.pokemon-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.pokemon-icon-menu {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.pokemon-img-pokedex {
+    width: 128px;
+    height: 128px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#frm-contact {
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+    font-family: sans-serif;
+    box-shadow: 5px 5px 5px #888888;
+    padding: 20px;
+}
+#frm-contact div {
+    margin-top: 10px;
+}
+
+#frm-contact input, textarea, button {
+    width: 100%;
+    border: 2px solid #9ECEDB;
+    padding: 3px 5px;
+}
+
+#frm-contact label {
+    font-weight: bold;
+    font-size: 12px;
+    color: #184552;
+}
+#frm-contact button {
+    background-color: #9ECEDB;
+    color: #184552;
+    cursor: pointer;
+}
+
+#frm-contact button:hover {
+    background-color: #CBEAF2;
+}
+
+#gameContainer {
+
+}
+
+.button1 {
+    background: #2B2D2F;
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.text1 {
+    font: bold 1.25rem/1 poppins;
+    color: #71DFBE;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    left: 0;
+    right: 0;
+}
+
+.progress-bar1 {
+    position: absolute;
+    height: 20px;
+    width: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 200px;
+    transform: translateY(-50%) translateX(-50%);
+    background: #505357;
+}
+
+svg1 {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    right: 0;
+}
+
+.check1 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/********************
+ *** Animation CSS ***
+ ********************/
+
+#tabbarPage .list {
+  background-color: grey;
+  overflow-x: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid #ccc;
+}
+
+#tabbarPage .list-item {
+  min-height: 0;
+  height: 44px;
+  background-color: white;
+  margin: 1px 0 -1px 0;
+}
+
+#tabbarPage .list-item--material {
+  height: 56px;
+}
+
+.list-title {
+  margin-top: 12px;
+}
+
+.hide-children * {
+  overflow: hidden;
+}
+
+.animation-swipe-right {
+  pointer-events: none;
+  -webkit-animation: swipe-right .9s ease-in-out forwards;
+          animation: swipe-right .9s ease-in-out forwards;
+}
+
+.animation-swipe-left {
+  pointer-events: none;
+  -webkit-animation: swipe-left .9s ease-in-out forwards;
+          animation: swipe-left .9s ease-in-out forwards;
+}
+
+.animation-remove {
+  pointer-events: none;
+  -webkit-animation: remove .7s ease-in-out forwards;
+          animation: remove .7s ease-in-out forwards;
+}
+
+@-webkit-keyframes swipe-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes swipe-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes swipe-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes swipe-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    height: 0;
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    height: 0;
+  }
+}
